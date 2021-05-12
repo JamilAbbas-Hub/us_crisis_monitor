@@ -3,14 +3,14 @@
 
 ## Project Significance
 The purpose behind visualizing the United States crisis data was to help illustrate the magnitude of unrest that occurred throughout 2020, and the possible severity of the ramifications.
-The Armed Conflict Location and Event Data Project (ACLED)[^ACLED] has labeled this the "crisis" dataset which seems severe at first.
+The Armed Conflict Location and Event Data Project ACLED <sup>1</sup> has labeled this the "crisis" dataset which seems severe at first.
 Recalling the simultaneous downfalls resulting from a contracting economy in the midst of the COVID-19 pandemic, and from having a presidential election in a very divided setting, it seems justifiable to label this period of time a crisis.
 Visualizing the scope of turnout for political violence and demonstration through this era of heightened risk and an ongoing pandemic is also an opportunity to showcase the benefits of visualizing spatial data.
 
 
 ## Data Summary
 
-The data was collected from the US Crisis Monitor dataset that was collected by the ACLED^[ACLED].
+The data was collected from the US Crisis Monitor dataset that was collected by the ACLED <sup>1</sup>.
 They describe political violence and demonstrations as either: battles, protests, riots, strategic developments, or violence against civilians.
 The data set records all instances of violence or demonstration in addition with their longitude and latitude points and some notes given the specifics of the event.
 This made the visualization easier as all the manipulations would be done to the data set, and let the programs generate the maps.
@@ -29,7 +29,7 @@ By animating the progression of the frequency of the events, we can visualize ho
 
 ![](./visuals/Geo_Visuals/by_month/geo_by_month_animated.gif)
 
-Both of these visuals were created in python's plotly library in the [create_spatial_visualization.py](https://github.com/JamilAbbas-Hub/JamilAbbas/blob/master/US%20Crisis%20Monitor/create_spatial_visualization.py) script.
+Both of these visuals were created in python's plotly library in the [create_spatial_visualization.py](https://github.com/JamilAbbas-Hub/us_crisis_monitor/blob/master/create_spatial_visualization.py) script.
 
 ## Exploratory Data analysis
 
@@ -53,7 +53,7 @@ California had the most events by quite a large margin, New York coming in secon
 
 ![](./visuals/EDA_Images/top_city_events.png)
 
-The visuals were created in the [create_save_EDA_images.py](https://github.com/JamilAbbas-Hub/JamilAbbas/blob/master/US%20Crisis%20Monitor/create_save_EDA_images.py) script.  
+The visuals were created in the [create_save_EDA_images.py](https://github.com/JamilAbbas-Hub/us_crisis_monitor/blob/master/create_save_EDA_images.py) script.  
 
 ## Impacts on the COVID-19 Pandemic
 
@@ -61,7 +61,7 @@ One of the reasons the ACLED labelled these events a 'crisis' was due to the fac
 Despite the majority of these events taking place outside, it is still a major reason for concern and still ultimately question whether these events had an impact on COVID-19 case numbers.
 We attempt to answer this question by conducting some analysis comparing COVID-19 case numbers with the frequency of events within a specific area.  
 
-Daily COVID-19 case data for the two states with the highest event frequency (California and New York) was taken and compared to a two week lag of the number of events that happened in the given state. [^COVID Tracking]
+Daily COVID-19 case data for the two states with the highest event frequency (California and New York) was taken and compared to a two week lag of the number of events that happened in the given state. <sup>2</sup>
 The two week lag is accounting for possible dormant COVID-19 symptoms, and cases as a result of attending these events occurring later on. Selecting the total cases two weeks after an event should encapsulate the total impact the number of events had on case numbers, if they had any impact at all.
 The total number of events is regressed to try to predict total case numbers two weeks into the future.
 The outputs of both California and New York regressions are displayed below respectively:  
@@ -124,11 +124,11 @@ Despite the fact that event frequency is significant in predicting COVID-19 case
 This makes sense as there are numerous amount of variables that go into explaining COVID-19 case numbers, and the model is too simple to encapsulate all of them.
 While this doesn't confirm anything about the relationship between the 'crisis' and COVID-19 cases, it is a beginning step and further analysis can be done to help provide an answer.
 
-The regressions are performed in the [covid_analysis.py](https://github.com/JamilAbbas-Hub/JamilAbbas/blob/master/US%20Crisis%20Monitor/covid_analysis.py) script.   
+The regressions are performed in the [covid_analysis.py](https://github.com/JamilAbbas-Hub/us_crisis_monitor/blob/master/covid_analysis.py) script.   
 
 
 
 
 ## References
-[^ACLED]: Armed Conflict Location and Event Data Project, "US Crisis Monitor", Accessed 2021-05-01, Online: https://acleddata.com/special-projects/us-crisis-monitor/  
-[^COVID Tracking]: The Covid Tracking Project, Accessed 2021-04-20, Online: https://covidtracking.com/
+<sup>1</sup> Armed Conflict Location and Event Data Project, "US Crisis Monitor", Accessed 2021-05-01, Online: https://acleddata.com/special-projects/us-crisis-monitor/  
+<sup>2</sup> The Covid Tracking Project, Accessed 2021-04-20, Online: https://covidtracking.com/
